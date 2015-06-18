@@ -1,0 +1,33 @@
+{
+    "name": "nmdev/twitter-api-bundle",
+    "keywords": ["Twitter", "Twitter API", "Symfony"],
+    "description": "Small and easy Twitter bundle for Symfony Project",
+    "license": "MIT",
+    "homepage": "https://github.com/rmed19/twitter-api-bundle",
+    "authors": [
+        {
+            "name": "Mohammed Rhamnia",
+            "email": "rhamnia@nm-development.com",
+            "homepage": "http://nm-development.com/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "4.*",
+        "guzzlehttp/log-subscriber": "1.*",
+        "monolog/monolog": "*",
+        "guzzlehttp/oauth-subscriber": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Nm\\TwitterApiBundle": ""
+        }
+    },
+    "target-dir": "Nm/TwitterApiBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
