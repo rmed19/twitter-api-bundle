@@ -28,7 +28,6 @@ file of your project:
                 // ...
                 new Nm\TwitterApiBundle\NmTwitterApiBundle(),
             );
-
             // ...
         }
     }
@@ -47,3 +46,23 @@ in your application:
         consumer_secret: YOUR_CONSUMER_SECRET
         access_token: YOUR_ACCESS_TOKEN
         access_token_secret: YOUR_ACCESS_TOKEN_SECRET
+
+Step 5: How to use :
+--------------------
+You should call the nm_twitter.manager service, this is an exemple on controller :
+
+.. code-block:: php
+
+    /**
+     * @Route("/app/hometimeline", name="hometimeline")
+     */
+    public function indexAction()
+    {
+        $statuses = $this->get('nm_twitter.manager')->getStatuses();
+        
+        $data = $statuses->getHomeTimeline();
+        
+        return $this->render('AppBundle:Default:new.html.twig', array(
+            'statuses' => $data
+        ));
+    }
