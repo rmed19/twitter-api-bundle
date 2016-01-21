@@ -62,7 +62,7 @@ You should call the nm_twitter.manager service, this is an exemple on controller
         
         $data = $statuses->getHomeTimeline();
         
-        return $this->render('AppBundle:Default:new.html.twig', array(
+        return $this->render('AppBundle:Default:index.html.twig', array(
             'statuses' => $data
         ));
     }
